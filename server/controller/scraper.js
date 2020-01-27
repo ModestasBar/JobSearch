@@ -1,5 +1,5 @@
 const handleScrap = async (RequestPromise, Cheerio, req) => {
-  const uri = `https://www.cvbankas.lt/?miestas=${req.body.url}&keyw=${req.body.keyw.split(' ').join('+')}`;
+  const uri = `http://www.cvbankas.lt/?miestas=${req.body.url}&keyw=${req.body.keyw.split(' ').join('+')}`;
   console.log(uri);
 
   const options = {

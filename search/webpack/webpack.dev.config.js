@@ -1,10 +1,11 @@
 const path = require('path');
 
 const parentDir = path.join(__dirname, '../');
+console.log(parentDir);
 
 module.exports = {
   entry: [
-    path.join(parentDir, 'index.jsx'),
+    path.join(parentDir, 'index.js'),
   ],
   module: {
     rules: [{

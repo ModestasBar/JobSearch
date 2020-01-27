@@ -21,9 +21,17 @@ app.get("/", (req, res) => {
   res.send("Sveiki!");
 });
 
+app.get("/work", async (req, res) => {
+  res.json(await handleScrape(RequestPromise, Cheerio, req));
+});
+
 app.put("/work", async (req, res) => {
   // console.log(req.body);
-  res.json(await handleScrape(RequestPromise, Cheerio, req));
+  try {
+    res.json(await handleScrape(RequestPromise, Cheerio, req));
+  } catch (e) {
+    console.log(e);
+  }
 });
 
 app.listen(port, console.log(`App is running in port ${port}!`));

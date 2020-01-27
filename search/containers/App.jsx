@@ -34,14 +34,14 @@ const App = () => {
 
   return (
     // eslint-disable-next-line react/jsx-fragments
-    <Fragment>
+    <div>
       <SearchField
         onUrlChange={handleUrlChange}
         onKeywChange={handleKeywChange}
         onClick={handleClick}
       />
       <PostSection onScrapData={handleScrapData()} />
-    </Fragment>
+    </div>
   );
 };
 
